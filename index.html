@@ -9,8 +9,40 @@
 
     <meta name="description" content="Portafolio artístico de Alan Romero. Rotulaciones, retratos y murales personalizados.">
 
-    <!-- Estilos CSS -->
     <link rel="stylesheet" href="css/estilos.css">
+
+    <style>
+        /* Fotografías de la galería */
+        .work-photo {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .work-card {
+            overflow: hidden;
+        }
+
+        .work-card[hidden] {
+            display: none !important;
+        }
+
+        .work-card img {
+            transition: transform 0.4s ease;
+        }
+
+        .work-card:hover img {
+            transform: scale(1.04);
+        }
+
+        .work-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 260px;
+        }
+    </style>
 
 </head>
 
@@ -113,41 +145,51 @@
 
 
         <!-- FOTOGRAFÍAS -->
-        <div class="gallery">
+        <div class="gallery" id="gallery">
 
-            <div class="work-card" data-category="rotulaciones">
-                <div class="work-placeholder">
-                    ROTULACIONES
-                </div>
-                <h3>Rotulación comercial</h3>
-                <p>Diseños personalizados para negocios.</p>
-            </div>
+            <!-- Las 23 fotografías de rotulaciones
+                 se agregarán automáticamente con JavaScript. -->
 
 
+            <!-- RETRATOS A COLOR -->
             <div class="work-card" data-category="color">
+
                 <div class="work-placeholder">
                     RETRATOS A COLOR
                 </div>
+
                 <h3>Retratos artísticos</h3>
+
                 <p>Retratos personalizados a color.</p>
+
             </div>
 
 
+            <!-- RETRATOS BLANCO Y NEGRO -->
             <div class="work-card" data-category="blanco-negro">
+
                 <div class="work-placeholder">
                     BLANCO Y NEGRO
                 </div>
+
                 <h3>Retratos realistas</h3>
+
                 <p>Retratos con técnicas monocromáticas.</p>
+
             </div>
 
 
+            <!-- MURALES -->
             <div class="work-card" data-category="murales">
+
                 <div class="work-placeholder">
                     MURALES
                 </div>
+
                 <h3>Murales con aerosol</h3>
+
                 <p>Arte y creatividad en paredes.</p>
+
             </div>
 
         </div>
@@ -214,7 +256,7 @@
     </footer>
 
 
-    <!-- JavaScript -->
+    <!-- JAVASCRIPT -->
     <script src="js/script.js"></script>
 
 </body>
