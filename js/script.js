@@ -1,20 +1,19 @@
 const gallery = document.getElementById("gallery");
 
-// 1. CARGAR ROTULACIONES (23 fotos - con extensión .jpeg original)
+// 1. CARGAR ROTULACIONES (Detecta automáticamente si es .jpeg o .jpg)
 for (let i = 1; i <= 23; i++) {
     const card = document.createElement("div");
     card.classList.add("work-card");
     card.dataset.category = "rotulaciones";
 
-    const ruta = `assets/images/rotulaciones/rotulo-${i}.jpeg`;
-
     card.innerHTML = `
-        <a href="${ruta}" target="_blank">
+        <a href="assets/images/rotulaciones/rotulo-${i}.jpeg" target="_blank" id="link-rotulo-${i}">
             <img
                 class="work-photo"
-                src="${ruta}"
+                src="assets/images/rotulaciones/rotulo-${i}.jpeg"
                 alt="Rotulación comercial ${i}"
                 loading="lazy"
+                onerror="this.onerror=null; this.src='assets/images/rotulaciones/rotulo-${i}.jpg'; document.getElementById('link-rotulo-${i}').href='assets/images/rotulaciones/rotulo-${i}.jpg';"
             >
         </a>
         <h3>Rotulación ${i}</h3>
@@ -24,7 +23,7 @@ for (let i = 1; i <= 23; i++) {
     gallery.appendChild(card);
 }
 
-// 2. CARGAR RETRATOS (con extensión .jpg)
+// 2. CARGAR RETRATOS
 const totalRetratos = 5; 
 
 for (let i = 1; i <= totalRetratos; i++) {
@@ -32,15 +31,14 @@ for (let i = 1; i <= totalRetratos; i++) {
     card.classList.add("work-card");
     card.dataset.category = "retratos";
 
-    const ruta = `assets/images/retratos/retrato-${i}.jpg`;
-
     card.innerHTML = `
-        <a href="${ruta}" target="_blank">
+        <a href="assets/images/retratos/retrato-${i}.jpg" target="_blank" id="link-retrato-${i}">
             <img
                 class="work-photo"
-                src="${ruta}"
+                src="assets/images/retratos/retrato-${i}.jpg"
                 alt="Retrato realista ${i}"
                 loading="lazy"
+                onerror="this.onerror=null; this.src='assets/images/retratos/retrato-${i}.jpeg'; document.getElementById('link-retrato-${i}').href='assets/images/retratos/retrato-${i}.jpeg';"
             >
         </a>
         <h3>Retrato realista ${i}</h3>
@@ -50,7 +48,7 @@ for (let i = 1; i <= totalRetratos; i++) {
     gallery.appendChild(card);
 }
 
-// 3. CARGAR MURALES (con extensión .jpg)
+// 3. CARGAR MURALES
 const totalMurales = 5; 
 
 for (let i = 1; i <= totalMurales; i++) {
@@ -58,15 +56,14 @@ for (let i = 1; i <= totalMurales; i++) {
     card.classList.add("work-card");
     card.dataset.category = "murales";
 
-    const ruta = `assets/images/murales/mural-${i}.jpg`;
-
     card.innerHTML = `
-        <a href="${ruta}" target="_blank">
+        <a href="assets/images/murales/mural-${i}.jpg" target="_blank" id="link-mural-${i}">
             <img
                 class="work-photo"
-                src="${ruta}"
+                src="assets/images/murales/mural-${i}.jpg"
                 alt="Mural artístico ${i}"
                 loading="lazy"
+                onerror="this.onerror=null; this.src='assets/images/murales/mural-${i}.jpeg'; document.getElementById('link-mural-${i}').href='assets/images/murales/mural-${i}.jpeg';"
             >
         </a>
         <h3>Mural artístico ${i}</h3>
