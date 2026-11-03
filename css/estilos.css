@@ -1,0 +1,470 @@
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #101010;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =================================
+   COLORES PRINCIPALES
+================================= */
+
+:root {
+    --negro: #101010;
+    --gris: #1c1c1c;
+    --dorado: #d6a83f;
+    --blanco: #ffffff;
+    --gris-claro: #bdbdbd;
+}
+
+/* =================================
+   ENCABEZADO
+================================= */
+
+.header {
+    width: 100%;
+    padding: 25px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #101010;
+    border-bottom: 1px solid #292929;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    color: var(--dorado);
+}
+
+.navbar {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--dorado);
+}
+
+/* =================================
+   PORTADA PRINCIPAL
+================================= */
+
+.hero {
+    min-height: 650px;
+    padding: 100px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: linear-gradient(
+        120deg,
+        #101010,
+        #252017,
+        #101010
+    );
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.subtitle {
+    color: var(--dorado);
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 75px);
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--dorado);
+}
+
+.description {
+    color: var(--gris-claro);
+    line-height: 1.8;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 28px;
+    background-color: var(--dorado);
+    color: #101010;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    transform: translateY(-4px);
+}
+
+/* =================================
+   IMAGEN DE PORTADA
+================================= */
+
+.hero-image {
+    width: 420px;
+    height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-frame {
+    width: 330px;
+    height: 390px;
+    border: 2px solid var(--dorado);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        145deg,
+        #302b21,
+        #151515
+    );
+    box-shadow: 0 15px 50px #00000080;
+}
+
+.image-frame span {
+    color: var(--dorado);
+    letter-spacing: 5px;
+    font-size: 13px;
+}
+
+.image-frame h2 {
+    font-size: 110px;
+    color: var(--dorado);
+    margin: 15px 0;
+}
+
+.image-frame p {
+    letter-spacing: 5px;
+    font-size: 13px;
+}
+
+/* =================================
+   SECCIÓN DE TRABAJOS
+================================= */
+
+.works {
+    padding: 100px 8%;
+    background-color: #171717;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title p {
+    color: var(--dorado);
+    letter-spacing: 4px;
+    font-size: 13px;
+}
+
+.section-title h2 {
+    font-size: 45px;
+    margin: 15px 0;
+}
+
+.section-title span {
+    color: var(--gris-claro);
+}
+
+/* =================================
+   CATEGORÍAS
+================================= */
+
+.categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.category {
+    padding: 12px 22px;
+    background: transparent;
+    border: 1px solid #555555;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.category:hover,
+.category.active {
+    background-color: var(--dorado);
+    color: #101010;
+    border-color: var(--dorado);
+}
+
+/* =================================
+   GALERÍA
+================================= */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.work-card {
+    background-color: #222222;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.work-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 30px #00000070;
+}
+
+.work-placeholder {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        135deg,
+        #665536,
+        #202020
+    );
+    color: var(--dorado);
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-align: center;
+    padding: 20px;
+}
+
+.work-card h3 {
+    padding: 20px 20px 10px;
+    font-size: 21px;
+}
+
+.work-card p {
+    padding: 0 20px 25px;
+    color: var(--gris-claro);
+    font-size: 14px;
+}
+
+/* =================================
+   SOBRE MÍ
+================================= */
+
+.about {
+    padding: 100px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.about-content {
+    max-width: 650px;
+}
+
+.about-content h2 {
+    font-size: 45px;
+    margin-bottom: 25px;
+}
+
+.about-content p {
+    color: var(--gris-claro);
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+.about-logo {
+    width: 300px;
+    height: 300px;
+    border: 2px solid var(--dorado);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    color: var(--dorado);
+    background-color: #1c1c1c;
+}
+
+/* =================================
+   CONTACTO
+================================= */
+
+.contact {
+    padding: 100px 8%;
+    text-align: center;
+    background-color: #1c1c1c;
+}
+
+.contact h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    color: var(--gris-claro);
+    margin-bottom: 25px;
+}
+
+/* =================================
+   PIE DE PÁGINA
+================================= */
+
+footer {
+    padding: 30px 8%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: #999999;
+    font-size: 13px;
+    border-top: 1px solid #333333;
+}
+
+/* =================================
+   DISEÑO RESPONSIVO
+   TABLETS
+================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+/* =================================
+   DISEÑO RESPONSIVO
+   CELULARES
+================================= */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 20px 5%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 70px 6%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 330px;
+    }
+
+    .image-frame {
+        width: 260px;
+        height: 300px;
+    }
+
+    .image-frame h2 {
+        font-size: 80px;
+    }
+
+    .works {
+        padding: 70px 6%;
+    }
+
+    .section-title h2 {
+        font-size: 35px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .work-placeholder {
+        height: 250px;
+    }
+
+    .about {
+        padding: 70px 6%;
+    }
+
+    .about-content h2 {
+        font-size: 35px;
+    }
+
+    .about-logo {
+        width: 220px;
+        height: 220px;
+        font-size: 75px;
+    }
+
+    .contact h2 {
+        font-size: 32px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
