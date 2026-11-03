@@ -1,6 +1,6 @@
 const gallery = document.getElementById("gallery");
 
-// 1. CARGAR ROTULACIONES (Detecta automáticamente si es .jpeg o .jpg)
+// 1. CARGAR ROTULACIONES (23 fotos)
 for (let i = 1; i <= 23; i++) {
     const card = document.createElement("div");
     card.classList.add("work-card");
@@ -23,8 +23,9 @@ for (let i = 1; i <= 23; i++) {
     gallery.appendChild(card);
 }
 
-// 2. CARGAR RETRATOS
-const totalRetratos = 5; 
+// 2. CARGAR RETRATOS (Cámbialo al número total de fotos que tengas, por ejemplo 23 o 24 si empieza desde el 0)
+// Nota: Si tus fotos van de 0 a 23, dime si quieres que empiece desde el 0 o el 1. Aquí lo ponemos hasta 23.
+const totalRetratos = 23; 
 
 for (let i = 1; i <= totalRetratos; i++) {
     const card = document.createElement("div");
@@ -48,8 +49,8 @@ for (let i = 1; i <= totalRetratos; i++) {
     gallery.appendChild(card);
 }
 
-// 3. CARGAR MURALES
-const totalMurales = 5; 
+// 3. CARGAR MURALES (Lo dejamos en 0 temporalmente hasta que subas tus fotos para evitar errores)
+const totalMurales = 0; 
 
 for (let i = 1; i <= totalMurales; i++) {
     const card = document.createElement("div");
@@ -63,7 +64,6 @@ for (let i = 1; i <= totalMurales; i++) {
                 src="assets/images/murales/mural-${i}.jpg"
                 alt="Mural artístico ${i}"
                 loading="lazy"
-                onerror="this.onerror=null; this.src='assets/images/murales/mural-${i}.jpeg'; document.getElementById('link-mural-${i}').href='assets/images/murales/mural-${i}.jpeg';"
             >
         </a>
         <h3>Mural artístico ${i}</h3>
