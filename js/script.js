@@ -22,7 +22,7 @@ for (let i = 1; i <= 23; i++) {
     gallery.appendChild(card);
 }
 
-// 2. CARGAR RETRATOS (Cambia el número 5 por la cantidad exacta de fotos que tengas en tu carpeta retratos)
+// 2. CARGAR RETRATOS
 const totalRetratos = 5; 
 
 for (let i = 1; i <= totalRetratos; i++) {
@@ -46,7 +46,7 @@ for (let i = 1; i <= totalRetratos; i++) {
     gallery.appendChild(card);
 }
 
-// 3. CARGAR MURALES (Cambia el número 5 por la cantidad exacta de fotos que tengas en tu carpeta murales)
+// 3. CARGAR MURALES
 const totalMurales = 5; 
 
 for (let i = 1; i <= totalMurales; i++) {
