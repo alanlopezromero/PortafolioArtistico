@@ -49,8 +49,8 @@ for (let i = 1; i <= totalRetratos; i++) {
     gallery.appendChild(card);
 }
 
-// 3. CARGAR MURALES (Lo dejamos en 0 temporalmente hasta que subas tus fotos para evitar errores)
-const totalMurales = 0; 
+// 3. CARGAR MURALES (Cambia el 5 por el número exacto de fotos que subiste)
+const totalMurales = 14; 
 
 for (let i = 1; i <= totalMurales; i++) {
     const card = document.createElement("div");
@@ -64,6 +64,7 @@ for (let i = 1; i <= totalMurales; i++) {
                 src="assets/images/murales/mural-${i}.jpg"
                 alt="Mural artístico ${i}"
                 loading="lazy"
+                onerror="this.onerror=null; this.src='assets/images/murales/mural-${i}.jpeg'; document.getElementById('link-mural-${i}').href='assets/images/murales/mural-${i}.jpeg';"
             >
         </a>
         <h3>Mural artístico ${i}</h3>
@@ -72,6 +73,7 @@ for (let i = 1; i <= totalMurales; i++) {
 
     gallery.appendChild(card);
 }
+
 
 
 // FILTROS DE CATEGORÍAS
