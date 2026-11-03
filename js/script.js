@@ -9,13 +9,16 @@ for (let i = 1; i <= 23; i++) {
 
     card.dataset.category = "rotulaciones";
 
+    // Se añadió la etiqueta <a> con href hacia la misma imagen y target="_blank"
     card.innerHTML = `
-        <img
-            class="work-photo"
-            src="assets/images/rotulaciones/rotulo-${i}.jpeg"
-            alt="Rotulación comercial ${i}"
-            loading="lazy"
-        >
+        <a href="assets/images/rotulaciones/rotulo-${i}.jpeg" target="_blank">
+            <img
+                class="work-photo"
+                src="assets/images/rotulaciones/rotulo-${i}.jpeg"
+                alt="Rotulación comercial ${i}"
+                loading="lazy"
+            >
+        </a>
 
         <h3>Rotulación ${i}</h3>
 
