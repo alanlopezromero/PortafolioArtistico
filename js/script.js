@@ -6,13 +6,16 @@ for (let i = 1; i <= 23; i++) {
     card.classList.add("work-card");
     card.dataset.category = "rotulaciones";
 
+    const ruta = `assets/images/rotulaciones/rotulo-${i}.jpg`; // Cambiado a .jpg (si tus rotulaciones son .jpeg cámbialo a .jpeg)
+
     card.innerHTML = `
-        <a href="assets/images/rotulaciones/rotulo-${i}.jpeg" target="_blank">
+        <a href="${ruta}" target="_blank">
             <img
                 class="work-photo"
-                src="assets/images/rotulaciones/rotulo-${i}.jpeg"
+                src="${ruta}"
                 alt="Rotulación comercial ${i}"
                 loading="lazy"
+                onerror="console.error('Error cargando rotulacion:', this.src)"
             >
         </a>
         <h3>Rotulación ${i}</h3>
@@ -30,13 +33,16 @@ for (let i = 1; i <= totalRetratos; i++) {
     card.classList.add("work-card");
     card.dataset.category = "retratos";
 
+    const ruta = `assets/images/retratos/retrato-${i}.jpg`;
+
     card.innerHTML = `
-        <a href="assets/images/retratos/retrato-${i}.jpeg" target="_blank">
+        <a href="${ruta}" target="_blank">
             <img
                 class="work-photo"
-                src="assets/images/retratos/retrato-${i}.jpeg"
+                src="${ruta}"
                 alt="Retrato realista ${i}"
                 loading="lazy"
+                onerror="console.error('Error cargando retrato:', this.src)"
             >
         </a>
         <h3>Retrato realista ${i}</h3>
@@ -54,13 +60,16 @@ for (let i = 1; i <= totalMurales; i++) {
     card.classList.add("work-card");
     card.dataset.category = "murales";
 
+    const ruta = `assets/images/murales/mural-${i}.jpg`;
+
     card.innerHTML = `
-        <a href="assets/images/murales/mural-${i}.jpeg" target="_blank">
+        <a href="${ruta}" target="_blank">
             <img
                 class="work-photo"
-                src="assets/images/murales/mural-${i}.jpeg"
+                src="${ruta}"
                 alt="Mural artístico ${i}"
                 loading="lazy"
+                onerror="console.error('Error cargando mural:', this.src)"
             >
         </a>
         <h3>Mural artístico ${i}</h3>
