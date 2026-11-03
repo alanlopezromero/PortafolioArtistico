@@ -1,12 +1,12 @@
 const gallery = document.getElementById("gallery");
 
-// 1. CARGAR ROTULACIONES (23 fotos)
+// 1. CARGAR ROTULACIONES (23 fotos - con extensión .jpeg original)
 for (let i = 1; i <= 23; i++) {
     const card = document.createElement("div");
     card.classList.add("work-card");
     card.dataset.category = "rotulaciones";
 
-    const ruta = `assets/images/rotulaciones/rotulo-${i}.jpg`; // Cambiado a .jpg (si tus rotulaciones son .jpeg cámbialo a .jpeg)
+    const ruta = `assets/images/rotulaciones/rotulo-${i}.jpeg`;
 
     card.innerHTML = `
         <a href="${ruta}" target="_blank">
@@ -15,7 +15,6 @@ for (let i = 1; i <= 23; i++) {
                 src="${ruta}"
                 alt="Rotulación comercial ${i}"
                 loading="lazy"
-                onerror="console.error('Error cargando rotulacion:', this.src)"
             >
         </a>
         <h3>Rotulación ${i}</h3>
@@ -25,7 +24,7 @@ for (let i = 1; i <= 23; i++) {
     gallery.appendChild(card);
 }
 
-// 2. CARGAR RETRATOS
+// 2. CARGAR RETRATOS (con extensión .jpg)
 const totalRetratos = 5; 
 
 for (let i = 1; i <= totalRetratos; i++) {
@@ -42,7 +41,6 @@ for (let i = 1; i <= totalRetratos; i++) {
                 src="${ruta}"
                 alt="Retrato realista ${i}"
                 loading="lazy"
-                onerror="console.error('Error cargando retrato:', this.src)"
             >
         </a>
         <h3>Retrato realista ${i}</h3>
@@ -52,7 +50,7 @@ for (let i = 1; i <= totalRetratos; i++) {
     gallery.appendChild(card);
 }
 
-// 3. CARGAR MURALES
+// 3. CARGAR MURALES (con extensión .jpg)
 const totalMurales = 5; 
 
 for (let i = 1; i <= totalMurales; i++) {
@@ -69,7 +67,6 @@ for (let i = 1; i <= totalMurales; i++) {
                 src="${ruta}"
                 alt="Mural artístico ${i}"
                 loading="lazy"
-                onerror="console.error('Error cargando mural:', this.src)"
             >
         </a>
         <h3>Mural artístico ${i}</h3>
