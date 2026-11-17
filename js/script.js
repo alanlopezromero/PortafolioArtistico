@@ -1,7 +1,7 @@
 const gallery = document.getElementById("gallery");
 
 // 1. CARGAR ROTULACIONES (23 fotos)
-for (let i = 1; i <= 23; i++) {
+for (let i = 1; i <= 24; i++) {
     const card = document.createElement("div");
     card.classList.add("work-card");
     card.dataset.category = "rotulaciones";
